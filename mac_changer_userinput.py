@@ -3,7 +3,7 @@
 
 import subprocess
 
-interface = input("interace >")
+interface = input("interface >")
 new_mac = input("new MAC >")
 
 print("[+] Changing MAC address for " + interface + " to " + new_mac)
