@@ -129,3 +129,61 @@ test_or = (7>5) and (5<7) #True
 test_or2 = (7>5) and (5>7) #also True - either condition can be True
 
 test_not = not True #False
+
+#CONDITONAL STATEMENTS - if/then/else
+
+def drink(money):
+    if money >=2:
+        return "You've got yourself a drink!"
+    else:
+        return "NO DRINK FOR YOU!"
+
+print(drink(3))
+print(drink(1))
+nl()
+
+def alcohol(age,money):
+    if (age >= 21) and (money >= 5):
+        return "We're getting a drink!"
+    elif (age >= 21) and (money < 5):
+        return "Come back with more money."
+    elif (age < 21) and (money >= 5):
+        return "Nice try, kid!"
+    else:
+        return "You're too young and too poor."
+print(alcohol(21,5))
+print(alcohol(21,4))
+print(alcohol(20,5))
+print(alcohol(20,4))
+nl()
+
+#LISTS - Have Brackets []
+movies =["When Harry Met Sally", "The Hangover", "The Perks of Being a Wallflower", "The Exorcist"]
+
+print(movies[1]) # returns item # selected - starts at 0 NOT 1
+print(movies[0])
+print(movies[1:3]) # returns range of items, but not inluding last item
+print(movies[1:]) # returns from item given to end
+print(movies[:1]) #returns from begining to item given
+print(movies[-1]) #return last item in list
+
+print(len(movies)) # count of item in list
+movies.append("JAWS") #adds items to list
+print(movies)
+movies.insert(2, "Hustle") # adds item to spot specified
+print(movies)
+
+movies.pop() #removes last item
+print(movies)
+movies.pop(0) # removes item specified
+
+wife_movies = ["Just Go With IT", "50 First Dates"]
+our_movies=movies+wife_movies # combines lists
+print(our_movies)
+
+grades = [["Bob", 82], ["Alice", 90], ["Jeff", 73], ["Moo", 1000],["You", 3]]
+bobs_grade=grades[0][1] #selects from item (2nd digit) from speceifed list (1st digit)
+print(bobs_grade)
+grades[0][1] = 83 #changes value specifed
+print(grades)
+nl()
