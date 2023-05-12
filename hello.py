@@ -187,3 +187,23 @@ print(bobs_grade)
 grades[0][1] = 83 #changes value specifed
 print(grades)
 nl()
+
+#TULPES - Lists that do not change, ()
+grades = ("a", "b", "c", "d", "f")
+print(grades[1])
+nl()
+
+#LOOPING
+
+#For loops - start to finish of an iterate
+vegetables=["cucumber", "spinach", "cabbage"]
+for x in vegetables:
+    print(x)
+
+#While loops - execute as long as True
+i =1 
+
+while i<10:
+    print(i)
+    i+=1
+    
