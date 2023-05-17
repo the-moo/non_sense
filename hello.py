@@ -206,4 +206,57 @@ i =1
 while i<10:
     print(i)
     i+=1
-    
+nl()    
+#ADVANCED STRINGS
+my_name = "Moo"
+print(my_name[0]) #first letter
+print(my_name[-1]) #last letter
+
+sentence = "This is a sentence"
+print(sentence[:4])
+print (sentence.split()) #delimeter - deflault is space
+
+sentence_split=sentence.split()
+sentence_join=' '.join(sentence_split)
+print(sentence_join)
+
+quote = "He said, 'give me all your money'"
+print (quote)
+quote = "He said, \"give me all your money\"" # use \ for charcther escape
+print (quote)
+
+too_much_space="                        hello                                "
+print(too_much_space.strip()) #removes extra spaces
+
+print("A" in "Apple") #True
+print("a" in "Apple") #False case sensetive
+
+letter= "A"
+word="Apple"
+print(letter.lower() in word.lower()) #improved to remove case issues
+
+movie= "The Hangover"
+print("My favorite movie is {}.".format(movie)) #string fromat method
+print("My favorite movie is %s." % movie) # % formating
+print(f"My favorite movie is {movie}.") # F string method
+nl()
+
+#DICTIONAIRIES - key/value pairs {}
+
+drinks= {"White Russian":7, "Old Fashion": 10, "Lemon Drop": 8} #drink is key, price is value
+print(drinks)
+
+employees= {"Finance": ["Bob", "Linda", "Tina"], "IT": ["Gene", "Louise", "Teddy"], "HR": ["Jimmy Jr", "Mort"]}
+print(employees)
+
+employees['Legal'] = ["Mr. Frond"] #adds new key/value pair
+print(employees)
+
+employees.update({"Sales": ["Andie", "Ollie"]}) #also adds new key/value pair
+print(employees)
+
+drinks['White Russian'] = 8 #changes value of exisiting key
+print(drinks)
+
+print(drinks.get("White Russian")) #gets value of key indicated
+nl()
