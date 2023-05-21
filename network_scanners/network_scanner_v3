@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # A basic network scanner with hard coded IP addresses and IPv4 broadcast
-# May require addition of scapy package to function properly
+
 
 import scapy.all as scapy
 
