@@ -1,10 +1,17 @@
 #!/usr/bin/env python
-# A basic network scanner with user input and parsed results that go into a pretty chart output
+# A basic network scanner with command line inputs
 
 
+import optparse
 import scapy.all as scapy
 
-target=input("IP Address to scan: ") #IP to scan
+
+parser=optparse.OptionParser()
+parser.add_option("-t", "--target", dest="target", help="IP address to scan")
+
+(options, arguments) = parser.parse_args()
+
+target=options.target
 
 def scan (ip):
     arp_request = scapy.ARP(pdst=ip)
