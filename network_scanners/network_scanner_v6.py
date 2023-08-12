@@ -1,18 +1,18 @@
 #!/usr/bin/env python
-# A basic network scanner with command line inputs
+# A basic network scanner with command line inputs that places data into dictionaries
+#optparse replaced with argparse
+#use pip3 install scapy-python3 to install scapy if nessecary
 
-
-import optparse
 import scapy.all as scapy
+import argparse
 
-parser=optparse.OptionParser()
-parser.add_option("-t", "--target", dest="target", help="IP address to scan")
+def get_arguments():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("-t", "--target", dest="target", help="IP address / IP range to scan")
+    options = parser.parse_args()
+    return options
 
-(options, arguments) = parser.parse_args()
-
-target=options.target
-
-def scan (ip):
+def scan (ip): #gathers info and places it into dictionaries
     arp_request = scapy.ARP(pdst=ip)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     arp_request_broadcast = broadcast/arp_request
@@ -24,10 +24,11 @@ def scan (ip):
         clients_list.append(client_dict)
     return clients_list
 
-def print_result (results_list):
+def print_result(results_list):
     print("IP\t\t\tMAC Address\n----------------------------------------------------")#\t prints tab
     for client in results_list:
         print(client["ip"] + "\t\t" + client["mac"])
 
-scan_result = scan(target) #IP address to be scanned
+options = get_arguments
+scan_result = scan(options.target) #IP address to be scanned
 print_result(scan_result)
