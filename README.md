@@ -7,4 +7,4 @@ If you do choose to utilize these for any reason, except for classroom examples 
 
 I am also learning how to use github in general, so the organization of these files is also probably chaotic at best.
 
-May 2, 2023 - Now experimenting with Bash scripting - new folder added to add chaos to the shell
+May 2, 2023 - Now experimenting with Bash scripting - new folder added with more poor workmanship
